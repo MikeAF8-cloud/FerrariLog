@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B145BC94-A620-4DC4-A46A-BD65F66F3D83}</ProjectGuid>
+    <RootNamespace>TestGrounds</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Async\AsyncLogger.h" />
+    <ClInclude Include="Async\AsyncMessage.h" />
+    <ClInclude Include="Async\CircularQueue.h" />
+    <ClInclude Include="Async\ThreadPool.h" />
+    <ClInclude Include="FerrariLog.h" />
+    <ClInclude Include="Formatters\FlagFormatter.h" />
+    <ClInclude Include="Formatters\Formatter.h" />
+    <ClInclude Include="Formatters\PatternFormatter.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="LoggerRegistry.h" />
+    <ClInclude Include="LogMessage.h" />
+    <ClInclude Include="OS.h" />
+    <ClInclude Include="RotationQueue.h" />
+    <ClInclude Include="Sinks\AnsiColorSink.h" />
+    <ClInclude Include="Sinks\DailyFileSink.h" />
+    <ClInclude Include="Sinks\DistibutionSink.h" />
+    <ClInclude Include="Sinks\FileSink.h" />
+    <ClInclude Include="Sinks\MSVCSink.h" />
+    <ClInclude Include="Sinks\OstreamSink.h" />
+    <ClInclude Include="Sinks\OutputColorSink.h" />
+    <ClInclude Include="Sinks\OutputSink.h" />
+    <ClInclude Include="Sinks\RotatingFileSink.h" />
+    <ClInclude Include="Sinks\Sink.h" />
+    <ClInclude Include="Sinks\WinColorSink.h" />
+    <ClInclude Include="Utils\Macros.h" />
+    <ClInclude Include="Utils\OSGlobals.h" />
+    <ClInclude Include="Utils\Utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Async\AsyncLogger.cpp" />
+    <ClCompile Include="Async\ThreadPool.cpp" />
+    <ClCompile Include="Formatters\FlagFormatter.cpp" />
+    <ClCompile Include="Formatters\PatternFormatter.cpp" />
+    <ClCompile Include="Level.cpp" />
+    <ClCompile Include="LoggerRegistry.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

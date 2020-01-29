@@ -1,0 +1,45 @@
+﻿Build started 5/18/2019 4:17:07 AM.
+     1>Project "C:\Dev\TestGrounds\TestGrounds\TestGrounds.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Async\AsyncLogger.cpp Async\ThreadPool.cpp
+         ThreadPool.cpp
+     1>c:\dev\testgrounds\testgrounds\async\asynclogger.h(20): error C2039: 'ThreadPool' : is not a member of 'FerrariLog::Utils'
+     1>c:\dev\testgrounds\testgrounds\async\asynclogger.h(20): error C2146: syntax error : missing ';' before identifier 'm_TP'
+     1>c:\dev\testgrounds\testgrounds\async\asynclogger.h(20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\dev\testgrounds\testgrounds\async\asynclogger.h(25): error C2039: 'ThreadPool' : is not a member of 'FerrariLog::Utils'
+     1>c:\dev\testgrounds\testgrounds\async\asynclogger.h(25): error C2065: 'ThreadPool' : undeclared identifier
+     1>c:\dev\testgrounds\testgrounds\async\asynclogger.h(25): error C2923: 'std::weak_ptr' : 'ThreadPool' is not a valid template type argument for parameter '_Ty'
+         AsyncLogger.cpp
+     1>c:\dev\testgrounds\testgrounds\async\asyncmessage.h(16): error C2065: 'AsyncLogger' : undeclared identifier
+     1>c:\dev\testgrounds\testgrounds\async\asyncmessage.h(16): error C2923: 'std::shared_ptr' : 'AsyncLogger' is not a valid template type argument for parameter '_Ty'
+     1>c:\dev\testgrounds\testgrounds\async\asyncmessage.h(39): error C2065: 'AsyncLogger' : undeclared identifier
+     1>c:\dev\testgrounds\testgrounds\async\asyncmessage.h(39): error C2923: 'std::shared_ptr' : 'AsyncLogger' is not a valid template type argument for parameter '_Ty'
+     1>c:\dev\testgrounds\testgrounds\async\asyncmessage.h(42): error C2065: 'AsyncLogger' : undeclared identifier
+     1>c:\dev\testgrounds\testgrounds\async\asyncmessage.h(42): error C2923: 'std::shared_ptr' : 'AsyncLogger' is not a valid template type argument for parameter '_Ty'
+     1>c:\dev\testgrounds\testgrounds\async\asyncmessage.h(25): error C2542: 'FerrariLog::AsyncMessage::m_Logger' : class object has no constructor for initialization
+     1>c:\dev\testgrounds\testgrounds\async\asyncmessage.h(30): error C2678: binary '=' : no operator found which takes a left-hand operand of type 'std::shared_ptr' (or there is no acceptable conversion)
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\memory(613): could be 'std::shared_ptr<_Ty> &std::shared_ptr<_Ty>::operator =(const std::shared_ptr<_Ty> &) throw()'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\memory(595): or       'std::shared_ptr<_Ty> &std::shared_ptr<_Ty>::operator =(std::shared_ptr<_Ty> &&) throw()'
+                 while trying to match the argument list '(std::shared_ptr, std::shared_ptr)'
+     1>c:\dev\testgrounds\testgrounds\async\asyncmessage.h(30): error C2582: 'operator =' function is unavailable in 'std::shared_ptr'
+     1>c:\dev\testgrounds\testgrounds\async\asyncmessage.h(39): error C2542: 'FerrariLog::AsyncMessage::m_Logger' : class object has no constructor for initialization
+     1>c:\dev\testgrounds\testgrounds\async\asyncmessage.h(42): error C2542: 'FerrariLog::AsyncMessage::m_Logger' : class object has no constructor for initialization
+     1>c:\dev\testgrounds\testgrounds\async\threadpool.h(23): error C2061: syntax error : identifier 'AsyncOverflowPolicy'
+     1>c:\dev\testgrounds\testgrounds\async\asynclogger.cpp(6): error C2664: 'FerrariLog::Utils::ThreadPool::ThreadPool(const FerrariLog::Utils::ThreadPool &)' : cannot convert argument 1 from 'std::weak_ptr<FerrariLog::Utils::ThreadPool>' to 'const FerrariLog::Utils::ThreadPool &'
+                 Reason: cannot convert from 'std::weak_ptr<FerrariLog::Utils::ThreadPool>' to 'const FerrariLog::Utils::ThreadPool'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>c:\dev\testgrounds\testgrounds\async\asynclogger.cpp(10): error C2039: 'lock' : is not a member of 'FerrariLog::Utils::ThreadPool'
+                 c:\dev\testgrounds\testgrounds\async\threadpool.h(12) : see declaration of 'FerrariLog::Utils::ThreadPool'
+     1>c:\dev\testgrounds\testgrounds\async\asynclogger.cpp(10): error C3536: 'ptr': cannot be used before it is initialized
+     1>c:\dev\testgrounds\testgrounds\async\asynclogger.cpp(14): error C2664: 'FerrariLog::AsyncMessage::AsyncMessage(std::shared_ptr,FerrariLog::AsyncMsgType)' : cannot convert argument 1 from 'std::shared_ptr<_Ty>' to 'std::shared_ptr'
+                 with
+                 [
+                     _Ty=FerrariLog::AsyncLogger
+                 ]
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+         Generating Code...
+     1>Done Building Project "C:\Dev\TestGrounds\TestGrounds\TestGrounds.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:02.53
